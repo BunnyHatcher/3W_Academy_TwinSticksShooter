@@ -1,0 +1,428 @@
+
+// Signed distance function library
+// After changing something here, click Reload All from clayxels' Global Config window.
+
+// Look for comments like // label: solidName, x: attributeName, y: etc, ...
+// Those labels are automatically parsed by clayxels UI scripts
+// extraAttrs and extraAttrs2 is what we use to pass values to customize the shape of each solid.
+// extraAttrs.w is reserved and used as a bitfield to determine if a solid is a painter, offtetter, group, or spline.
+// extraAttrs2.w is reserved for thickness.
+
+#define MAXTHREADS 8 // set this to 4 on low-end integrated graphic cards (leave it at 8 on M1 Macs)
+
+float globalRoundCornerValue = 0.0; // externally set from Clayxel.cs
+float3 mulQuat(float3 v, float4 q);
+bool checkMirrorX(int mask);
+float2 bezier(float3 p0, float3 p1, float3 p2);
+float cylinderCone(float3 p, float3 s, float3 r);
+float sphereMaxNorm(float3 p, float3 r);
+float noise(float3 x);
+
+inline float computeClayDistanceFunction(uint solidType, float3 cellPoint, float3 solidPos, float4 solidRot, float3 solidSize, float4 extraAttrs, float4 extraAttrs2, float scaleFactor){
+	float dist = 1e10;
+	
+	if(checkMirrorX(extraAttrs.w)){
+		cellPoint.x = abs(cellPoint.x);
+	}
+	
+	float3 localPoint = cellPoint - solidPos;
+	float3 pointRotated = mulQuat(localPoint, solidRot);
+
+	float thickness = extraAttrs2.w;
+	
+	if(solidType == 0){// label: cube, x: round 0, w2: thickness 0
+		// Inigo Quilez box
+		float round = ((extraAttrs.x + globalRoundCornerValue) * scaleFactor) - thickness;
+
+		float3 a = abs(pointRotated) - solidSize + round;
+		dist = length(max(a, 0.0)) + min(max(a.x, max(a.y, a.z)), 0.0) - round;
+	}
+	else if(solidType == 1){// label: sphere, x: round 0, y: sliceY 0, w2: thickness 0
+		float round = ((extraAttrs.x + globalRoundCornerValue) * scaleFactor) - thickness;
+		
+		float dPerfectSphere = length(pointRotated) - solidSize.x + round;
+
+		// mediamolecule's max norm sphere, needed for squashed spheroids
+		float dMaxNormSphere = sphereMaxNorm(pointRotated, solidSize) + round;
+
+		float maxScale = max(solidSize.x, max(solidSize.y, solidSize.z));
+		float minScale = min(solidSize.x, min(solidSize.y, solidSize.z));
+		float squash = saturate((maxScale - minScale) * 1000.0);
+
+		float d = lerp(dPerfectSphere, dMaxNormSphere, squash);
+
+		// slicing
+		float sliceY = (-solidSize.y * ((extraAttrs.y * 2.0) - 1.0)) + scaleFactor;
+		float slicedY = -pointRotated.y - sliceY;
+		dist = length(max(float2(d, slicedY), 0.0)) + min(max(d, slicedY), 0.0) - round;
+	}
+	else if(solidType == 2){// label: cylinder, x: round 0, y: sharp 0, z: cone 0, w2: thickness 0
+		float round = ((extraAttrs.x + globalRoundCornerValue) * scaleFactor) - thickness;
+
+		if(round > solidSize.y){
+			round = solidSize.y;
+		}
+
+		float sharp = extraAttrs.y * scaleFactor;
+		
+		// float cone = extraAttrs.z * scaleFactor; // uncomment to get the old cone behaviour
+		float cone = - (extraAttrs.z * scaleFactor); // new cone behaviour has an inverted value
+
+		float3 params = float3(
+			(-1.0 * sharp) + min(solidSize.x, solidSize.z), 
+			round, 
+			cone);
+		
+		dist = cylinderCone(pointRotated, solidSize, params);
+	}
+	else if(solidType == 3){// label: torus, x: fat 0.2, y: round 0, z: sliceY 0, w2: thickness 0
+		extraAttrs.x *= scaleFactor;
+		if(extraAttrs.x < 0.01){
+			extraAttrs.x = 0.01;
+		}
+		if(extraAttrs.y < 0.0){
+			extraAttrs.y = 0.0;
+		}
+
+		float round = ((extraAttrs.y + globalRoundCornerValue) * scaleFactor);
+
+		float fat = extraAttrs.x - round;
+
+		float fatLimit = solidSize.z;// * 2.0;
+		if(fat > fatLimit){
+			fat = fatLimit;
+		}
+
+		float elongationLimit = solidSize.z - fat - round;
+		if(elongationLimit < 0.0){
+			elongationLimit = 0.0;
+		}
+
+		float elongation = clamp(pointRotated.z, -elongationLimit, elongationLimit);
+		pointRotated.z -= elongation;
+
+		float le = (solidSize.y - solidSize.x);
+		float r1 = (solidSize.x - fat - round);
+		
+		float3 a = float3(pointRotated.x, max(abs(pointRotated.y) - le, 0.0), pointRotated.z);
+
+		float d = length(float2(length(a.xy) - (r1), a.z)) - fat;
+		
+		// // slicing
+		float sliceY = (-solidSize.y * ((extraAttrs.z * 2.0) - 1.0)) + scaleFactor;
+		float slicedY = -pointRotated.y - sliceY;
+
+		dist = length(max(float2(d, -pointRotated.y - sliceY), 0.0)) + min(max(d, slicedY), 0.0) - round;
+	}
+	else if(solidType == 4){// label: curve, x: slide 0.5, y: weight 0.5, z: fat 0.5, w2: thickness 0
+		float fat = extraAttrs.z * scaleFactor;
+
+		float fatLimit = solidSize.z * 2.0;
+		if(fat > fatLimit){
+			fat = fatLimit;
+		}
+		
+		pointRotated.x += solidSize.x - (fat * 0.5);
+		pointRotated.y += solidSize.y - (fat - (fat*0.5));
+
+		float elongationLimit = solidSize.z - fat;
+		if(elongationLimit < 0.0){
+			elongationLimit = 0.0;
+		}
+
+		float elongation = clamp(pointRotated.z, -elongationLimit, elongationLimit);
+		pointRotated.z -= elongation;
+		
+		float2 distParam = bezier(pointRotated, 
+			float3(extraAttrs.x * ((solidSize.x*2.0) - fat), (solidSize.y * 3.0) - fat, 0.0), float3((solidSize.x*2.0) - fat, 0.0, 0.0));
+
+		float weightParam = clamp(extraAttrs.y, 0.0, 1.0);
+		float weight = clamp(lerp((1.0 - weightParam), weightParam, distParam.y), 0.0, 1.0);
+		dist = distParam.x - (fat * weight);
+	}
+	else if(solidType == 5){// label: hexagon, x: round 0, w2: thickness 0
+		// Inigo Quilez
+		float round = ((extraAttrs.x + globalRoundCornerValue) * scaleFactor) - thickness;
+
+		float3 k = float3(-0.8660254, 0.5, 0.57735);
+		pointRotated = abs(pointRotated);
+		pointRotated.xy -= 2.0 * min(dot(k.xy, pointRotated.xy), 0.0) * k.xy;
+
+		float sizeX = (solidSize.x - round) - (solidSize.x / 7.0);
+		float sizeZ = solidSize.z - round;
+
+		float minSize = min(sizeX, solidSize.y - round);
+		if(sizeX > minSize){
+			sizeX = minSize;
+		}
+
+		float2 d = float2(
+			length(pointRotated.xy - float2(clamp(pointRotated.x, -k.z * sizeX, k.z *sizeX), sizeX)) * sign(pointRotated.y - sizeX),
+			pointRotated.z - sizeZ);
+
+		dist = min(max(d.x, d.y),0.0) + length(max(d, 0.0)) - round;
+	}
+	else if(solidType == 6){// label: prism, x: round 0, w2: thickness 0
+		// Inigo Quilez
+		float round = ((extraAttrs.x + globalRoundCornerValue) * scaleFactor) - thickness;
+
+		float k = 1.73205080757;// sqrt(3.0);
+		float sizeX = solidSize.x * (0.5*k) - round;
+		float sizeZ = solidSize.z - round;
+
+		float minSize = min(sizeX, solidSize.y * (0.5*k) - round);
+		if(sizeX > minSize){
+			sizeX = minSize;
+		}
+
+		pointRotated.xy = pointRotated.xy * rcp(sizeX);
+		pointRotated.x = abs(pointRotated.x) - 1.0;
+		pointRotated.y = pointRotated.y + 1.0 * rcp(k);
+		if( pointRotated.x+k*pointRotated.y>0.0 ) pointRotated.xy=float2(pointRotated.x-k*pointRotated.y,-k*pointRotated.x - pointRotated.y) * 0.5;
+		pointRotated.x -= clamp( pointRotated.x, -2.0, 0.0 );
+		float d1 = length(pointRotated.xy)*sign(- pointRotated.y)*sizeX;
+		float d2 = abs(pointRotated.z)-sizeZ;
+		dist = length(max(float2(d1,d2),0.0)) + min(max(d1,d2), 0.0) - round;
+	}
+	else if(solidType == 7){// label: noise, x: scale 0.5, y: detail 0.1, z: carve 0.05, w2: round 0, x2: offsetX 0.0, y2: offsetY 0.0, z2: offsetZ 0.0
+		solidSize = clamp(solidSize, 0.0, chunkSize);
+		float scale = clamp(extraAttrs.x * 5.0, 1.0, 5.0);
+		int detail = clamp(extraAttrs.y * 10.0, 1.0, 8.0);
+		float carve = clamp(extraAttrs.z * 10.0, 0.0, 1.0);
+
+	    float a = 0.0;
+	    float b = carve;
+		float f = 1.0;
+	    for( int i=0; i < detail; i++ ){
+	        float n = noise(f * pointRotated * scale + extraAttrs2.xyz);
+	        a += b*n;           // accumulate values		
+	        b *= 0.5;             // amplitude decrease
+	        f *= 1.8;             // frequency increase
+	    }
+
+	    a -= 0.185;
+		a *= 0.35;
+
+		// inscribe inside scaled unit box
+		float roundAttr = clamp(thickness, 0.0, 1.0);// round box corners
+		float round = ((roundAttr + globalRoundCornerValue) * scaleFactor);
+		float3 d = abs(pointRotated) - solidSize + round;
+		float boxDist = length(max(d, 0.0)) + min(max(d.x, max(d.y, d.z)), 0.0) - round;
+
+    	// inscribe in sphere
+		// float sphereDist = sphereMaxNorm(pointRotated, solidSize);
+
+		dist = max(a, boxDist);
+	}
+
+	if(thickness > 0.0){	
+		dist = abs(dist + thickness) - thickness;
+	}
+	
+	return dist;
+}
+
+// utility functions
+inline float3 mulQuat(float3 v, float4 q){
+	float3 t = 2.0 * cross(v, q.xyz);
+
+	return v + q.w * t + cross(t, q.xyz);
+}
+
+bool checkMirrorX(int mask){
+	return (mask >> 1) & 1;
+}
+
+#define MAXNORM_MAX 1000.0
+
+float min3(float a, float b, float c){
+	return min(min(a, b), c);
+}
+
+float max3(float a, float b, float c){
+	return max(max(a, b), c);
+}
+
+float sumx(float3 v){
+    return v.x + v.y + v.z;
+}
+
+inline float2 solve_quadratic(float a, float b, float c){
+	// ax^2 + bx + c = 0, a non-zero
+	float q = b*b - 4.0*a*c;
+	if (q < 0.0) {
+		return float2(MAXNORM_MAX, MAXNORM_MAX);
+	}
+
+	float aDoubleDiv = rcp(2.0 * a);
+
+	float r0 = -b * aDoubleDiv;
+	float r1 = sqrt(q) * aDoubleDiv;
+	return float2(r0 - r1, r0 + r1);    
+}
+
+// Media Molecule's max norm sphere: https://www.shadertoy.com/view/Mt2XWG
+inline float sphereMaxNorm(float3 p, float3 r){
+	// move ellipse so that target point is at origin, centre in positive space
+	// f(v) = (v.x - c.x)^2/r.x^2 + (v.y - c.y)^2/r.y^2 + (v.z - c.z)^2/r.z^2 - 1
+	float3 c = abs(p);
+	float3 c2 = c*c;
+	float3 r2 = r*r;
+	float d = MAXNORM_MAX;
+
+	float3 r2Div = rcp(r2);
+
+	// gather terms of quadratic
+	float3 qa = r2Div;
+	float3 qb = -2.0*c * r2Div;
+	float3 qc = c2 * r2Div;
+	float qcs = sumx(qc) - 1.0;
+
+	// check corners:
+	// solve f(v)=0 for v.x=v.y=v.z=t
+	float2 t0 = abs(solve_quadratic(sumx(qa), sumx(qb), qcs));
+	d = min3(d, t0.x, t0.y);
+
+	// interior of convex shape always hits corners first, so early out
+	if(qcs <= 0.0) {
+		return -d;
+	}
+
+	// check edges:
+	// df/dx=0 => v.x=c.x, solve f(v)=0 for v.x=c.x, v.y=v.z=t
+	// then do the same for y and z cases
+
+	float2 t = abs(solve_quadratic(qa.y + qa.z, qb.y + qb.z, qc.y + qc.z - 1.0));
+	d = min(d, max(min(t.x, t.y), c.x));
+
+	t = abs(solve_quadratic(qa.x + qa.z, qb.x + qb.z, qc.x + qc.z - 1.0));
+	d = min(d, max(min(t.x, t.y), c.y));
+
+	t = abs(solve_quadratic(qa.x + qa.y, qb.x + qb.y, qc.x + qc.y - 1.0));
+	d = min(d, max(min(t.x, t.y), c.z));
+
+	// check faces:
+	// df/dx=df/dy=0 => v.xy=c.xy, so f(v)=0 => |v.z - c.z|=r.z
+	d = min(d, max3(c.x, c.y, abs(c.z - r.z)));
+	d = min(d, max3(c.x, abs(c.y - r.y), c.z));
+	d = min(d, max3(abs(c.x - r.x), c.y, c.z));
+
+	// done
+	return d;
+}
+
+// https://www.shadertoy.com/view/ldj3Wh
+inline float2 bezier(float3 p0, float3 p1, float3 p2){    
+	float3 b = (-2.0)*p1 + p2;
+	float3 c = p1 * 2.0;
+	float3 d = - p0;
+
+	float kk = rcp(dot(b,b));
+	float kx = kk * dot(p1,b);
+	float ky = kk * (2.0*dot(p1,p1)+dot(d,b)) * 0.33333333333;
+	float kz = kk * dot(d,p1);      
+
+	float2 res;
+
+	float p = ky - kx*kx;
+	float p3 = p*p*p;
+	float q = kx*(2.0*kx*kx - 3.0*ky) + kz;
+	float h = q*q + 4.0*p3;
+
+	if(h >= 0.0) { 
+		h = sqrt(h);
+		float2 x = (float2(h, -h) - q) / 2.0;
+		float2 uv = sign(x)*pow(abs(x), 0.33333333333);
+		float t = uv.x + uv.y - kx;
+		t = clamp( t, 0.0, 1.0 );
+
+		// 1 root
+		float3 qos = d + (c + b*t)*t;
+		res = float2( length(qos),t);
+	}
+	else{
+		float z = sqrt(-p);
+		float v = acos( q * rcp(p*z*2.0) ) * 0.33333333333;
+		float m = cos(v);
+		float n = sin(v)*1.732050808;
+		float3 t = float3(m + m, -n - m, n - m) * z - kx;
+		t = clamp( t, 0.0, 1.0 );
+
+		// 3 roots
+		float3 qos = d + (c + b*t.x)*t.x;
+		float dis = dot(qos,qos);
+		
+		res = float2(dis,t.x);
+
+		qos = d + (c + b*t.y)*t.y;
+		dis = dot(qos,qos);
+		if( dis<res.x ) res = float2(dis,t.y );
+
+		qos = d + (c + b*t.z)*t.z;
+		dis = dot(qos,qos);
+		if( dis<res.x ) res = float2(dis,t.z );
+
+		res.x = sqrt( res.x );
+	}
+	
+	return res;
+}
+
+// uberprim https://www.shadertoy.com/view/MsVGWG
+// s: width, height, depth
+// r: xy corner radius, z corner radius, bottom radius offset
+inline float cylinderCone(float3 p, float3 s, float3 r) {
+	s.xz -= r.x;
+	r.x -= r.y;
+	s.y -= r.y;
+
+	float2 b = float2(r.z, -2.0*s.y);
+	float2 ba = b * rcp(dot(b,b));
+	float sz2 = b.y;
+
+	float3 d = abs(p) - s.xyz;
+	float q = length(max(d.xz, 0.0)) + min(0.0,max(d.x,d.z)) - r.x;
+
+	float2 pa = float2(q, p.y - s.y);
+	float2 diag = pa - float2(r.z,sz2) * clamp(dot(pa,ba), 0.0, 1.0);
+	float2 h0 = float2(max(q - r.z,0.0),p.y + s.y);
+	float2 h1 = float2(max(q,0.0),p.y - s.y);
+
+	float res = sqrt(min(dot(diag,diag),min(dot(h0,h0),dot(h1,h1)))) * sign(max(dot(pa,float2(-ba.y, ba.x)), d.y)) - r.y;
+
+	return res;
+}
+
+float hash( float n ) { 
+	return frac(sin(n)*753.5453123); 
+}
+
+// Inigo Quilez https://www.shadertoy.com/view/XttSz2
+inline float noise(float3 x)
+{
+    float3 p = floor(x);
+    float3 w = frac(x);
+	float3 u = w*w*(3.0-2.0*w);
+    
+    float n = p.x + p.y*157.0 + 113.0*p.z;
+    
+    float a = hash(n+  0.0);
+    float b = hash(n+  1.0);
+    float c = hash(n+157.0);
+    float d = hash(n+158.0);
+    float e = hash(n+113.0);
+	float f = hash(n+114.0);
+    float g = hash(n+270.0);
+    float h = hash(n+271.0);
+	
+    float k0 =   a;
+    float k1 =   b - a;
+    float k2 =   c - a;
+    float k3 =   e - a;
+    float k4 =   a - b - c + d;
+    float k5 =   a - c - e + g;
+    float k6 =   a - b - e + f;
+    float k7 = - a + b + c - d + e - f - g + h;
+
+    return k0 + k1*u.x + k2*u.y + k3*u.z + k4*u.x*u.y + k5*u.y*u.z + k6*u.z*u.x + k7*u.x*u.y*u.z;
+}

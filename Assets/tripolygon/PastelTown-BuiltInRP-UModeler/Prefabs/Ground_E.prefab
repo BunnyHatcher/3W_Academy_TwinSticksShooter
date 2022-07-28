@@ -1,0 +1,2054 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1135552697864970043
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1135552697864970044}
+  - component: {fileID: 1135552697864970047}
+  - component: {fileID: 1135552697864970046}
+  - component: {fileID: 1135552697864970041}
+  - component: {fileID: 1135552697864970040}
+  m_Layer: 0
+  m_Name: Ground_E
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1135552697864970044
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1135552697864970043}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1135552697864970047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1135552697864970043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1508455596, guid: 18036820e4eaef34a9ef9afc1a245ef1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  editableMesh_:
+    mainPolygons_:
+    - vertices_:
+      - pos: {x: -10.01205, y: 0, z: -8.174659}
+        uv: {x: 0.36871302, y: 0.64111406}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -10.01205, y: -0.18095553, z: -8.174659}
+        uv: {x: 0.36871302, y: 0.6436699}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -10.01205, y: -0.18095553, z: -4.4985914}
+        uv: {x: 0.42066157, y: 0.6436699}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -10.01205, y: 0, z: -4.4985914}
+        uv: {x: 0.42066157, y: 0.64111406}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      edges_:
+      - i0_: 0
+        i1_: 1
+      - i0_: 1
+        i1_: 2
+      - i0_: 2
+        i1_: 3
+      - i0_: 3
+        i1_: 0
+      uvParams_:
+        shift: {x: 0, y: 0}
+        scale: {x: 1, y: 1}
+        rotation: 0
+      plane_:
+        normal_: {x: -1, y: 0, z: 0}
+        distance_: -10.01205
+      matID_: 0
+      flags_: 1
+      instanceID_: 114606
+      groupID: 0
+    - vertices_:
+      - pos: {x: -8.007156, y: 0.20230293, z: -4.4985914}
+        uv: {x: 0.36675024, y: 0.8397025}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -8.007156, y: 0, z: -4.4985914}
+        uv: {x: 0.3623938, y: 0.83970183}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -10.01205, y: 0, z: -4.4985914}
+        uv: {x: 0.3623938, y: 0.949924}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -10.01205, y: 0.20230293, z: -4.4985914}
+        uv: {x: 0.36675024, y: 0.9499265}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      edges_:
+      - i0_: 0
+        i1_: 1
+      - i0_: 1
+        i1_: 2
+      - i0_: 2
+        i1_: 3
+      - i0_: 3
+        i1_: 0
+      uvParams_:
+        shift: {x: 0, y: 0}
+        scale: {x: 1, y: 1}
+        rotation: 0
+      plane_:
+        normal_: {x: 0, y: 0, z: -1}
+        distance_: -4.4985914
+      matID_: 0
+      flags_: 1
+      instanceID_: 115978
+      groupID: 0
+    - vertices_:
+      - pos: {x: -10.01205, y: 0, z: -4.4985914}
+        uv: {x: 0.42066157, y: 0.64111406}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -8.007156, y: 0, z: -4.4985914}
+        uv: {x: 0.42066902, y: 0.5688747}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -8.007156, y: 0, z: -8.174659}
+        uv: {x: 0.3687181, y: 0.5688747}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -10.01205, y: 0, z: -8.174659}
+        uv: {x: 0.36871302, y: 0.64111406}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      edges_:
+      - i0_: 0
+        i1_: 1
+      - i0_: 1
+        i1_: 2
+      - i0_: 2
+        i1_: 3
+      - i0_: 3
+        i1_: 0
+      uvParams_:
+        shift: {x: 0, y: 0}
+        scale: {x: 1, y: 1}
+        rotation: 0
+      plane_:
+        normal_: {x: -0, y: 1, z: 0}
+        distance_: -0
+      matID_: 0
+      flags_: 1
+      instanceID_: 115953
+      groupID: 0
+    - vertices_:
+      - pos: {x: -8.007156, y: 0, z: -8.174659}
+        uv: {x: 0.3687181, y: 0.5688747}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -8.007156, y: -0.18095553, z: -8.174659}
+        uv: {x: 0.3661648, y: 0.56887895}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -10.01205, y: -0.18095553, z: -8.174659}
+        uv: {x: 0.36615717, y: 0.64111406}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -10.01205, y: 0, z: -8.174659}
+        uv: {x: 0.36871302, y: 0.64111406}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      edges_:
+      - i0_: 0
+        i1_: 1
+      - i0_: 1
+        i1_: 2
+      - i0_: 2
+        i1_: 3
+      - i0_: 3
+        i1_: 0
+      uvParams_:
+        shift: {x: 0, y: 0}
+        scale: {x: 1, y: 1}
+        rotation: 0
+      plane_:
+        normal_: {x: 0, y: 0, z: -1}
+        distance_: -8.174659
+      matID_: 0
+      flags_: 1
+      instanceID_: 114592
+      groupID: 0
+    - vertices_:
+      - pos: {x: -8.007156, y: 0, z: 2.8788939}
+        uv: {x: 0.52582157, y: 0.83534217}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -8.007156, y: 0, z: -4.4985914}
+        uv: {x: 0.36674634, y: 0.83534217}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -8.007156, y: 0.20230293, z: -4.4985914}
+        uv: {x: 0.36675024, y: 0.8397025}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -8.007156, y: 0.20230293, z: 2.8788939}
+        uv: {x: 0.5258229, y: 0.8397025}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      edges_:
+      - i0_: 0
+        i1_: 1
+      - i0_: 1
+        i1_: 2
+      - i0_: 2
+        i1_: 3
+      - i0_: 3
+        i1_: 0
+      uvParams_:
+        shift: {x: 0, y: 0}
+        scale: {x: 1, y: 1}
+        rotation: 0
+      plane_:
+        normal_: {x: 1, y: 0, z: 0}
+        distance_: 8.007156
+      matID_: 0
+      flags_: 1
+      instanceID_: 25380841
+      groupID: 0
+    - vertices_:
+      - pos: {x: -8.007156, y: 0.20230293, z: 2.8788939}
+        uv: {x: 0.5258229, y: 0.8397025}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -8.007156, y: 0.20230293, z: -4.4985914}
+        uv: {x: 0.36675024, y: 0.8397025}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -10.01205, y: 0.20230293, z: -4.4985914}
+        uv: {x: 0.36675024, y: 0.9499265}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -10.01205, y: 0.20230293, z: 2.8788939}
+        uv: {x: 0.5258229, y: 0.9499265}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      edges_:
+      - i0_: 0
+        i1_: 1
+      - i0_: 1
+        i1_: 2
+      - i0_: 2
+        i1_: 3
+      - i0_: 3
+        i1_: 0
+      uvParams_:
+        shift: {x: 0, y: 0}
+        scale: {x: 1, y: 1}
+        rotation: 0
+      plane_:
+        normal_: {x: 0, y: 1, z: 0}
+        distance_: -0.20230293
+      matID_: 0
+      flags_: 1
+      instanceID_: 25380852
+      groupID: 0
+    - vertices_:
+      - pos: {x: -10.01205, y: 0.20230293, z: 2.8788939}
+        uv: {x: 0.5258229, y: 0.9499265}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -10.01205, y: 0.20230293, z: -4.4985914}
+        uv: {x: 0.36675024, y: 0.9499265}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -10.01205, y: 0, z: -4.4985914}
+        uv: {x: 0.36674634, y: 0.95428365}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -10.01205, y: 0, z: 2.8788939}
+        uv: {x: 0.52582157, y: 0.95428365}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      edges_:
+      - i0_: 0
+        i1_: 1
+      - i0_: 1
+        i1_: 2
+      - i0_: 2
+        i1_: 3
+      - i0_: 3
+        i1_: 0
+      uvParams_:
+        shift: {x: 0, y: 0}
+        scale: {x: 1, y: 1}
+        rotation: 0
+      plane_:
+        normal_: {x: -1, y: 0, z: 0}
+        distance_: -10.01205
+      matID_: 0
+      flags_: 1
+      instanceID_: 25380863
+      groupID: 0
+    - vertices_:
+      - pos: {x: -10.01205, y: 0, z: 2.8788939}
+        uv: {x: 0.52582157, y: 0.95428365}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -10.01205, y: 0, z: -4.4985914}
+        uv: {x: 0.36674634, y: 0.95428365}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -10.01205, y: -0.18095553, z: -4.4985914}
+        uv: {x: 0.36674634, y: 0.9581882}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -10.01205, y: -0.18095553, z: 2.8788939}
+        uv: {x: 0.52582157, y: 0.9581882}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      edges_:
+      - i0_: 0
+        i1_: 1
+      - i0_: 1
+        i1_: 2
+      - i0_: 2
+        i1_: 3
+      - i0_: 3
+        i1_: 0
+      uvParams_:
+        shift: {x: 0, y: 0}
+        scale: {x: 1, y: 1}
+        rotation: 0
+      plane_:
+        normal_: {x: -1, y: 0, z: 0}
+        distance_: -10.01205
+      matID_: 0
+      flags_: 1
+      instanceID_: 25380874
+      groupID: 0
+    - vertices_:
+      - pos: {x: 10.092652, y: 0, z: -8.174659}
+        uv: {x: 0.36871302, y: 0.64111406}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 10.092652, y: -0.18095553, z: -8.174659}
+        uv: {x: 0.36871302, y: 0.6436699}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 10.092652, y: -0.18095553, z: -4.4985914}
+        uv: {x: 0.42066157, y: 0.6436699}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 10.092652, y: 0, z: -4.4985914}
+        uv: {x: 0.42066157, y: 0.64111406}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      edges_:
+      - i0_: 0
+        i1_: 3
+      - i0_: 3
+        i1_: 2
+      - i0_: 2
+        i1_: 1
+      - i0_: 1
+        i1_: 0
+      uvParams_:
+        shift: {x: 0, y: 0}
+        scale: {x: 1, y: 1}
+        rotation: 0
+      plane_:
+        normal_: {x: 1, y: 0, z: 0}
+        distance_: -10.092652
+      matID_: 0
+      flags_: 1
+      instanceID_: 25383580
+      groupID: 0
+    - vertices_:
+      - pos: {x: 8.087759, y: 0.20230293, z: -4.4985914}
+        uv: {x: 0.36675024, y: 0.8397025}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 8.087759, y: 0, z: -4.4985914}
+        uv: {x: 0.3623938, y: 0.83970183}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 10.092652, y: 0, z: -4.4985914}
+        uv: {x: 0.3623938, y: 0.949924}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 10.092652, y: 0.20230293, z: -4.4985914}
+        uv: {x: 0.36675024, y: 0.9499265}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      edges_:
+      - i0_: 0
+        i1_: 3
+      - i0_: 3
+        i1_: 2
+      - i0_: 2
+        i1_: 1
+      - i0_: 1
+        i1_: 0
+      uvParams_:
+        shift: {x: 0, y: 0}
+        scale: {x: 1, y: 1}
+        rotation: 0
+      plane_:
+        normal_: {x: 0, y: 0, z: -1}
+        distance_: -4.4985914
+      matID_: 0
+      flags_: 1
+      instanceID_: 25383583
+      groupID: 0
+    - vertices_:
+      - pos: {x: 10.092652, y: 0, z: -4.4985914}
+        uv: {x: 0.42066157, y: 0.64111406}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 8.087759, y: 0, z: -4.4985914}
+        uv: {x: 0.42066902, y: 0.5688747}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 8.087759, y: 0, z: -8.174659}
+        uv: {x: 0.3687181, y: 0.5688747}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 10.092652, y: 0, z: -8.174659}
+        uv: {x: 0.36871302, y: 0.64111406}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      edges_:
+      - i0_: 0
+        i1_: 3
+      - i0_: 3
+        i1_: 2
+      - i0_: 2
+        i1_: 1
+      - i0_: 1
+        i1_: 0
+      uvParams_:
+        shift: {x: 0, y: 0}
+        scale: {x: 1, y: 1}
+        rotation: 0
+      plane_:
+        normal_: {x: -0, y: 1, z: 0}
+        distance_: -0
+      matID_: 0
+      flags_: 1
+      instanceID_: 25383587
+      groupID: 0
+    - vertices_:
+      - pos: {x: 8.087759, y: 0, z: -8.174659}
+        uv: {x: 0.3687181, y: 0.5688747}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 8.087759, y: -0.18095553, z: -8.174659}
+        uv: {x: 0.3661648, y: 0.56887895}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 10.092652, y: -0.18095553, z: -8.174659}
+        uv: {x: 0.36615717, y: 0.64111406}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 10.092652, y: 0, z: -8.174659}
+        uv: {x: 0.36871302, y: 0.64111406}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      edges_:
+      - i0_: 0
+        i1_: 3
+      - i0_: 3
+        i1_: 2
+      - i0_: 2
+        i1_: 1
+      - i0_: 1
+        i1_: 0
+      uvParams_:
+        shift: {x: 0, y: 0}
+        scale: {x: 1, y: 1}
+        rotation: 0
+      plane_:
+        normal_: {x: 0, y: 0, z: -1}
+        distance_: -8.174659
+      matID_: 0
+      flags_: 1
+      instanceID_: 25383599
+      groupID: 0
+    - vertices_:
+      - pos: {x: 8.087759, y: 0, z: 2.8788939}
+        uv: {x: 0.52582157, y: 0.83534217}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 8.087759, y: 0, z: -4.4985914}
+        uv: {x: 0.36674634, y: 0.83534217}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 8.087759, y: 0.20230293, z: -4.4985914}
+        uv: {x: 0.36675024, y: 0.8397025}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 8.087759, y: 0.20230293, z: 2.8788939}
+        uv: {x: 0.5258229, y: 0.8397025}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      edges_:
+      - i0_: 0
+        i1_: 3
+      - i0_: 3
+        i1_: 2
+      - i0_: 2
+        i1_: 1
+      - i0_: 1
+        i1_: 0
+      uvParams_:
+        shift: {x: 0, y: 0}
+        scale: {x: 1, y: 1}
+        rotation: 0
+      plane_:
+        normal_: {x: -1, y: 0, z: 0}
+        distance_: 8.087759
+      matID_: 0
+      flags_: 1
+      instanceID_: 25383619
+      groupID: 0
+    - vertices_:
+      - pos: {x: 8.087759, y: 0.20230293, z: 2.8788939}
+        uv: {x: 0.5258229, y: 0.8397025}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 8.087759, y: 0.20230293, z: -4.4985914}
+        uv: {x: 0.36675024, y: 0.8397025}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 10.092652, y: 0.20230293, z: -4.4985914}
+        uv: {x: 0.36675024, y: 0.9499265}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 10.092652, y: 0.20230293, z: 2.8788939}
+        uv: {x: 0.5258229, y: 0.9499265}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      edges_:
+      - i0_: 0
+        i1_: 3
+      - i0_: 3
+        i1_: 2
+      - i0_: 2
+        i1_: 1
+      - i0_: 1
+        i1_: 0
+      uvParams_:
+        shift: {x: 0, y: 0}
+        scale: {x: 1, y: 1}
+        rotation: 0
+      plane_:
+        normal_: {x: 0, y: 1, z: 0}
+        distance_: -0.20230293
+      matID_: 0
+      flags_: 1
+      instanceID_: 25383622
+      groupID: 0
+    - vertices_:
+      - pos: {x: 10.092652, y: 0.20230293, z: 2.8788939}
+        uv: {x: 0.5258229, y: 0.9499265}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 10.092652, y: 0.20230293, z: -4.4985914}
+        uv: {x: 0.36675024, y: 0.9499265}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 10.092652, y: 0, z: -4.4985914}
+        uv: {x: 0.36674634, y: 0.95428365}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 10.092652, y: 0, z: 2.8788939}
+        uv: {x: 0.52582157, y: 0.95428365}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      edges_:
+      - i0_: 0
+        i1_: 3
+      - i0_: 3
+        i1_: 2
+      - i0_: 2
+        i1_: 1
+      - i0_: 1
+        i1_: 0
+      uvParams_:
+        shift: {x: 0, y: 0}
+        scale: {x: 1, y: 1}
+        rotation: 0
+      plane_:
+        normal_: {x: 1, y: 0, z: 0}
+        distance_: -10.092652
+      matID_: 0
+      flags_: 1
+      instanceID_: 25383630
+      groupID: 0
+    - vertices_:
+      - pos: {x: 10.092652, y: 0, z: 2.8788939}
+        uv: {x: 0.52582157, y: 0.95428365}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 10.092652, y: 0, z: -4.4985914}
+        uv: {x: 0.36674634, y: 0.95428365}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 10.092652, y: -0.18095553, z: -4.4985914}
+        uv: {x: 0.36674634, y: 0.9581882}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 10.092652, y: -0.18095553, z: 2.8788939}
+        uv: {x: 0.52582157, y: 0.9581882}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      edges_:
+      - i0_: 0
+        i1_: 3
+      - i0_: 3
+        i1_: 2
+      - i0_: 2
+        i1_: 1
+      - i0_: 1
+        i1_: 0
+      uvParams_:
+        shift: {x: 0, y: 0}
+        scale: {x: 1, y: 1}
+        rotation: 0
+      plane_:
+        normal_: {x: 1, y: 0, z: 0}
+        distance_: -10.092652
+      matID_: 0
+      flags_: 1
+      instanceID_: 25383636
+      groupID: 0
+    - vertices_:
+      - pos: {x: -4.1279016, y: 0, z: -8.174659}
+        uv: {x: 0.3687181, y: 0.5209258}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -8.007156, y: 0, z: -8.174659}
+        uv: {x: 0.3687181, y: 0.5688747}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -8.007156, y: 0, z: -4.4985914}
+        uv: {x: 0.42066902, y: 0.5688747}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -4.1279016, y: 0, z: -4.4985914}
+        uv: {x: 0.42066902, y: 0.5209258}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      edges_:
+      - i0_: 0
+        i1_: 1
+      - i0_: 1
+        i1_: 2
+      - i0_: 2
+        i1_: 3
+      - i0_: 3
+        i1_: 0
+      uvParams_:
+        shift: {x: 0, y: 0}
+        scale: {x: 1, y: 1}
+        rotation: 0
+      plane_:
+        normal_: {x: 0, y: 1, z: 0}
+        distance_: -0
+      matID_: 0
+      flags_: 1
+      instanceID_: 25369885
+      groupID: 0
+    - vertices_:
+      - pos: {x: -4.1279016, y: -0.18095553, z: -8.174659}
+        uv: {x: 0.3661648, y: 0.5209279}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -8.007156, y: -0.18095553, z: -8.174659}
+        uv: {x: 0.3661648, y: 0.56887895}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -8.007156, y: 0, z: -8.174659}
+        uv: {x: 0.3687181, y: 0.5688747}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -4.1279016, y: 0, z: -8.174659}
+        uv: {x: 0.3687181, y: 0.5209258}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      edges_:
+      - i0_: 0
+        i1_: 1
+      - i0_: 1
+        i1_: 2
+      - i0_: 2
+        i1_: 3
+      - i0_: 3
+        i1_: 0
+      uvParams_:
+        shift: {x: 0, y: 0}
+        scale: {x: 1, y: 1}
+        rotation: 0
+      plane_:
+        normal_: {x: 0, y: 0, z: -1}
+        distance_: -8.174659
+      matID_: 0
+      flags_: 1
+      instanceID_: 25369896
+      groupID: 0
+    - vertices_:
+      - pos: {x: -0.782925, y: 0, z: -8.174659}
+        uv: {x: 0.3687181, y: 0.49904352}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -4.1279016, y: 0, z: -8.174659}
+        uv: {x: 0.3687181, y: 0.5209258}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -4.1279016, y: 0, z: -4.4985914}
+        uv: {x: 0.42066902, y: 0.5209258}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -0.782925, y: 0, z: -4.4985914}
+        uv: {x: 0.42066902, y: 0.49904352}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      edges_:
+      - i0_: 0
+        i1_: 1
+      - i0_: 1
+        i1_: 2
+      - i0_: 2
+        i1_: 3
+      - i0_: 3
+        i1_: 0
+      uvParams_:
+        shift: {x: 0, y: 0}
+        scale: {x: 1, y: 1}
+        rotation: 0
+      plane_:
+        normal_: {x: 0, y: 1, z: 0}
+        distance_: -0
+      matID_: 0
+      flags_: 1
+      instanceID_: 25383297
+      groupID: 0
+    - vertices_:
+      - pos: {x: -0.782925, y: -0.18095553, z: -8.174659}
+        uv: {x: 0.3661648, y: 0.49904463}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -4.1279016, y: -0.18095553, z: -8.174659}
+        uv: {x: 0.3661648, y: 0.5209279}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -4.1279016, y: 0, z: -8.174659}
+        uv: {x: 0.3687181, y: 0.5209258}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -0.782925, y: 0, z: -8.174659}
+        uv: {x: 0.3687181, y: 0.49904352}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      edges_:
+      - i0_: 0
+        i1_: 1
+      - i0_: 1
+        i1_: 2
+      - i0_: 2
+        i1_: 3
+      - i0_: 3
+        i1_: 0
+      uvParams_:
+        shift: {x: 0, y: 0}
+        scale: {x: 1, y: 1}
+        rotation: 0
+      plane_:
+        normal_: {x: 0, y: 0, z: -1}
+        distance_: -8.174659
+      matID_: 0
+      flags_: 1
+      instanceID_: 25383313
+      groupID: 0
+    - vertices_:
+      - pos: {x: -4.1279016, y: 0, z: 2.8788939}
+        uv: {x: 0.5249291, y: 0.5209258}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -4.1279016, y: 0, z: -4.4985914}
+        uv: {x: 0.42066902, y: 0.5209258}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -8.007156, y: 0, z: -4.4985914}
+        uv: {x: 0.42066902, y: 0.5688747}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -8.007156, y: 0, z: 2.8788939}
+        uv: {x: 0.5249291, y: 0.5688747}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      edges_:
+      - i0_: 0
+        i1_: 1
+      - i0_: 1
+        i1_: 2
+      - i0_: 2
+        i1_: 3
+      - i0_: 3
+        i1_: 0
+      uvParams_:
+        shift: {x: 0, y: 0}
+        scale: {x: 1, y: 1}
+        rotation: 0
+      plane_:
+        normal_: {x: 0, y: 1, z: -0}
+        distance_: -0
+      matID_: 0
+      flags_: 1
+      instanceID_: 25380830
+      groupID: 0
+    - vertices_:
+      - pos: {x: -4.1279016, y: 0.20230293, z: 2.8788939}
+        uv: {x: 0.46941864, y: 0.8541934}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -4.1279016, y: 0.20230293, z: -4.4985914}
+        uv: {x: 0.6436863, y: 0.8541934}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -4.1279016, y: 0, z: -4.4985914}
+        uv: {x: 0.6436863, y: 0.84651786}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -4.1279016, y: 0, z: 2.8788939}
+        uv: {x: 0.46941864, y: 0.84651786}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      edges_:
+      - i0_: 0
+        i1_: 1
+      - i0_: 1
+        i1_: 2
+      - i0_: 2
+        i1_: 3
+      - i0_: 3
+        i1_: 0
+      uvParams_:
+        shift: {x: 0, y: 0}
+        scale: {x: 1, y: 1}
+        rotation: 0
+      plane_:
+        normal_: {x: -1, y: 0, z: 0}
+        distance_: -4.1279016
+      matID_: 0
+      flags_: 1
+      instanceID_: 25380887
+      groupID: 0
+    - vertices_:
+      - pos: {x: -0.782925, y: 0, z: -4.4985914}
+        uv: {x: 0.6484641, y: 0.9498936}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -4.1279016, y: 0, z: -4.4985914}
+        uv: {x: 0.6484641, y: 0.85419697}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -4.1279016, y: 0.20230293, z: -4.4985914}
+        uv: {x: 0.6436863, y: 0.8541934}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -0.782925, y: 0.20230293, z: -4.4985914}
+        uv: {x: 0.6436863, y: 0.9498901}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      edges_:
+      - i0_: 0
+        i1_: 1
+      - i0_: 1
+        i1_: 2
+      - i0_: 2
+        i1_: 3
+      - i0_: 3
+        i1_: 0
+      uvParams_:
+        shift: {x: 0, y: 0}
+        scale: {x: 1, y: 1}
+        rotation: 0
+      plane_:
+        normal_: {x: 0, y: 0, z: -1}
+        distance_: -4.4985914
+      matID_: 0
+      flags_: 1
+      instanceID_: 25383345
+      groupID: 0
+    - vertices_:
+      - pos: {x: -0.782925, y: 0.20230293, z: -4.4985914}
+        uv: {x: 0.6436863, y: 0.9498901}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -4.1279016, y: 0.20230293, z: -4.4985914}
+        uv: {x: 0.6436863, y: 0.8541934}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -4.1279016, y: 0.20230293, z: 2.8788939}
+        uv: {x: 0.46941864, y: 0.8541934}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -0.782925, y: 0.20230293, z: 2.8788939}
+        uv: {x: 0.46941864, y: 0.9498901}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      edges_:
+      - i0_: 0
+        i1_: 1
+      - i0_: 1
+        i1_: 2
+      - i0_: 2
+        i1_: 3
+      - i0_: 3
+        i1_: 0
+      uvParams_:
+        shift: {x: 0, y: 0}
+        scale: {x: 1, y: 1}
+        rotation: 0
+      plane_:
+        normal_: {x: 0, y: 1, z: 0}
+        distance_: -0.20230293
+      matID_: 0
+      flags_: 1
+      instanceID_: 25383405
+      groupID: 0
+    - vertices_:
+      - pos: {x: -0.782925, y: 0, z: -8.174659}
+        uv: {x: 0.3687181, y: 0.49904352}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -0.782925, y: 0, z: -4.4985914}
+        uv: {x: 0.42066902, y: 0.49904352}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 4.5301113, y: 0, z: -4.4985914}
+        uv: {x: 0.42066902, y: 0.5209258}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 4.5301113, y: 0, z: -8.174659}
+        uv: {x: 0.3687181, y: 0.5209258}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      edges_:
+      - i0_: 0
+        i1_: 1
+      - i0_: 1
+        i1_: 2
+      - i0_: 2
+        i1_: 3
+      - i0_: 3
+        i1_: 0
+      uvParams_:
+        shift: {x: 0, y: 0}
+        scale: {x: 1, y: 1}
+        rotation: 0
+      plane_:
+        normal_: {x: 0, y: 1, z: 0}
+        distance_: -0
+      matID_: 0
+      flags_: 1
+      instanceID_: 25383655
+      groupID: 0
+    - vertices_:
+      - pos: {x: -0.782925, y: 0, z: -4.4985914}
+        uv: {x: 0.6484641, y: 0.9498936}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -0.782925, y: 0.20230293, z: -4.4985914}
+        uv: {x: 0.6436863, y: 0.9498901}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 4.5301113, y: 0.20230293, z: -4.4985914}
+        uv: {x: 0.6436863, y: 0.8541934}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 4.5301113, y: 0, z: -4.4985914}
+        uv: {x: 0.6484641, y: 0.85419697}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      edges_:
+      - i0_: 0
+        i1_: 1
+      - i0_: 1
+        i1_: 2
+      - i0_: 2
+        i1_: 3
+      - i0_: 3
+        i1_: 0
+      uvParams_:
+        shift: {x: 0, y: 0}
+        scale: {x: 1, y: 1}
+        rotation: 0
+      plane_:
+        normal_: {x: 0, y: 0, z: -1}
+        distance_: -4.4985914
+      matID_: 0
+      flags_: 1
+      instanceID_: 25383667
+      groupID: 0
+    - vertices_:
+      - pos: {x: 4.5301113, y: 0, z: -8.174659}
+        uv: {x: 0.3687181, y: 0.5209258}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 4.5301113, y: 0, z: -4.4985914}
+        uv: {x: 0.42066902, y: 0.5209258}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 8.087759, y: 0, z: -4.4985914}
+        uv: {x: 0.42066902, y: 0.5688747}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 8.087759, y: 0, z: -8.174659}
+        uv: {x: 0.3687181, y: 0.5688747}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      edges_:
+      - i0_: 0
+        i1_: 1
+      - i0_: 1
+        i1_: 2
+      - i0_: 2
+        i1_: 3
+      - i0_: 3
+        i1_: 0
+      uvParams_:
+        shift: {x: 0, y: 0}
+        scale: {x: 1, y: 1}
+        rotation: 0
+      plane_:
+        normal_: {x: 0, y: 1, z: 0}
+        distance_: -0
+      matID_: 0
+      flags_: 1
+      instanceID_: 25383603
+      groupID: 0
+    - vertices_:
+      - pos: {x: 4.5301113, y: 0, z: 2.8788939}
+        uv: {x: 0.5249291, y: 0.5209258}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 8.087759, y: 0, z: 2.8788939}
+        uv: {x: 0.5249291, y: 0.5688747}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 8.087759, y: 0, z: -4.4985914}
+        uv: {x: 0.42066902, y: 0.5688747}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 4.5301113, y: 0, z: -4.4985914}
+        uv: {x: 0.42066902, y: 0.5209258}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      edges_:
+      - i0_: 0
+        i1_: 1
+      - i0_: 1
+        i1_: 2
+      - i0_: 2
+        i1_: 3
+      - i0_: 3
+        i1_: 0
+      uvParams_:
+        shift: {x: 0, y: 0}
+        scale: {x: 1, y: 1}
+        rotation: 0
+      plane_:
+        normal_: {x: -0, y: 1, z: 0}
+        distance_: -0
+      matID_: 0
+      flags_: 1
+      instanceID_: 25383615
+      groupID: 0
+    - vertices_:
+      - pos: {x: 4.5301113, y: 0.20230293, z: 2.8788939}
+        uv: {x: 0.46941864, y: 0.8541934}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 4.5301113, y: 0, z: 2.8788939}
+        uv: {x: 0.46941864, y: 0.84651786}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 4.5301113, y: 0, z: -4.4985914}
+        uv: {x: 0.6436863, y: 0.84651786}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 4.5301113, y: 0.20230293, z: -4.4985914}
+        uv: {x: 0.6436863, y: 0.8541934}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      edges_:
+      - i0_: 0
+        i1_: 1
+      - i0_: 1
+        i1_: 2
+      - i0_: 2
+        i1_: 3
+      - i0_: 3
+        i1_: 0
+      uvParams_:
+        shift: {x: 0, y: 0}
+        scale: {x: 1, y: 1}
+        rotation: 0
+      plane_:
+        normal_: {x: 1, y: 0, z: 0}
+        distance_: -4.5301113
+      matID_: 0
+      flags_: 1
+      instanceID_: 25383642
+      groupID: 0
+    - vertices_:
+      - pos: {x: -0.782925, y: -0.18095553, z: -8.174659}
+        uv: {x: 0.3661648, y: 0.49904463}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -0.782925, y: 0, z: -8.174659}
+        uv: {x: 0.3687181, y: 0.49904352}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 4.5301113, y: 0, z: -8.174659}
+        uv: {x: 0.3687181, y: 0.5209258}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 4.5301113, y: -0.18095553, z: -8.174659}
+        uv: {x: 0.3661648, y: 0.5209279}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      edges_:
+      - i0_: 0
+        i1_: 1
+      - i0_: 1
+        i1_: 2
+      - i0_: 2
+        i1_: 3
+      - i0_: 3
+        i1_: 0
+      uvParams_:
+        shift: {x: 0, y: 0}
+        scale: {x: 1, y: 1}
+        rotation: 0
+      plane_:
+        normal_: {x: 0, y: 0, z: -1}
+        distance_: -8.174659
+      matID_: 0
+      flags_: 1
+      instanceID_: 25383659
+      groupID: 0
+    - vertices_:
+      - pos: {x: 4.5301113, y: -0.18095553, z: -8.174659}
+        uv: {x: 0.3661648, y: 0.5209279}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 4.5301113, y: 0, z: -8.174659}
+        uv: {x: 0.3687181, y: 0.5209258}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 8.087759, y: 0, z: -8.174659}
+        uv: {x: 0.3687181, y: 0.5688747}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 8.087759, y: -0.18095553, z: -8.174659}
+        uv: {x: 0.3661648, y: 0.56887895}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      edges_:
+      - i0_: 0
+        i1_: 1
+      - i0_: 1
+        i1_: 2
+      - i0_: 2
+        i1_: 3
+      - i0_: 3
+        i1_: 0
+      uvParams_:
+        shift: {x: 0, y: 0}
+        scale: {x: 1, y: 1}
+        rotation: 0
+      plane_:
+        normal_: {x: 0, y: 0, z: -1}
+        distance_: -8.174659
+      matID_: 0
+      flags_: 1
+      instanceID_: 25383607
+      groupID: 0
+    - vertices_:
+      - pos: {x: -0.782925, y: 0.20230293, z: -4.4985914}
+        uv: {x: 0.6436863, y: 0.9498901}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -0.782925, y: 0.20230293, z: 2.8788939}
+        uv: {x: 0.46941864, y: 0.9498901}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 4.5301113, y: 0.20230293, z: 2.8788939}
+        uv: {x: 0.46941864, y: 0.8541934}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 4.5301113, y: 0.20230293, z: -4.4985914}
+        uv: {x: 0.6436863, y: 0.8541934}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      edges_:
+      - i0_: 0
+        i1_: 1
+      - i0_: 1
+        i1_: 2
+      - i0_: 2
+        i1_: 3
+      - i0_: 3
+        i1_: 0
+      uvParams_:
+        shift: {x: 0, y: 0}
+        scale: {x: 1, y: 1}
+        rotation: 0
+      plane_:
+        normal_: {x: 0, y: 1, z: 0}
+        distance_: -0.20230293
+      matID_: 0
+      flags_: 1
+      instanceID_: 25383679
+      groupID: 0
+    - vertices_:
+      - pos: {x: -8.007024, y: 0.00000090897083, z: 11.904072}
+        uv: {x: 0.6356307, y: 0.83970183}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -8.007024, y: 0.20230383, z: 11.904072}
+        uv: {x: 0.6312706, y: 0.8397025}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -10.011917, y: 0.20230383, z: 11.904072}
+        uv: {x: 0.6312706, y: 0.9499265}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -10.011917, y: 0.00000090897083, z: 11.904072}
+        uv: {x: 0.6356307, y: 0.949924}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      edges_:
+      - i0_: 0
+        i1_: 1
+      - i0_: 1
+        i1_: 2
+      - i0_: 2
+        i1_: 3
+      - i0_: 3
+        i1_: 0
+      uvParams_:
+        shift: {x: 0, y: 0}
+        scale: {x: 1, y: 1}
+        rotation: 0
+      plane_:
+        normal_: {x: 0, y: -0, z: 1}
+        distance_: -11.904072
+      matID_: 0
+      flags_: 1
+      instanceID_: 113890
+      groupID: 0
+    - vertices_:
+      - pos: {x: -10.011917, y: 0.00000090897083, z: 11.904072}
+        uv: {x: 0.6356307, y: 0.949924}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -10.011917, y: -0.18095462, z: 11.904072}
+        uv: {x: 0.6395352, y: 0.949924}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -8.007024, y: -0.18095462, z: 11.904072}
+        uv: {x: 0.6395352, y: 0.83970183}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -8.007024, y: 0.00000090897083, z: 11.904072}
+        uv: {x: 0.6356307, y: 0.83970183}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      edges_:
+      - i0_: 0
+        i1_: 1
+      - i0_: 1
+        i1_: 2
+      - i0_: 2
+        i1_: 3
+      - i0_: 3
+        i1_: 0
+      uvParams_:
+        shift: {x: 0, y: 0}
+        scale: {x: 1, y: 1}
+        rotation: 0
+      plane_:
+        normal_: {x: 0, y: 0, z: 1}
+        distance_: -11.904072
+      matID_: 0
+      flags_: 1
+      instanceID_: 114602
+      groupID: 0
+    - vertices_:
+      - pos: {x: -4.127769, y: 0.00000090897083, z: 11.904072}
+        uv: {x: 0.34911656, y: 0.8541993}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -8.007024, y: 0.00000090897083, z: 11.904072}
+        uv: {x: 0.34911656, y: 0.7236723}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -8.007024, y: -0.18095462, z: 11.904072}
+        uv: {x: 0.34484226, y: 0.7236723}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -4.127769, y: -0.18095462, z: 11.904072}
+        uv: {x: 0.34484226, y: 0.8541993}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      edges_:
+      - i0_: 0
+        i1_: 1
+      - i0_: 1
+        i1_: 2
+      - i0_: 2
+        i1_: 3
+      - i0_: 3
+        i1_: 0
+      uvParams_:
+        shift: {x: 0, y: 0}
+        scale: {x: 1, y: 1}
+        rotation: 0
+      plane_:
+        normal_: {x: -0, y: 0, z: 1}
+        distance_: -11.904072
+      matID_: 0
+      flags_: 1
+      instanceID_: 25369916
+      groupID: 0
+    - vertices_:
+      - pos: {x: -8.007024, y: 0.20230383, z: 11.904072}
+        uv: {x: 0.35389584, y: 0.7236723}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -8.007024, y: 0.00000090897083, z: 11.904072}
+        uv: {x: 0.34911656, y: 0.7236723}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -4.127769, y: 0.00000090897083, z: 11.904072}
+        uv: {x: 0.34911656, y: 0.8541993}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -4.127769, y: 0.20230383, z: 11.904072}
+        uv: {x: 0.35389584, y: 0.8541993}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      edges_:
+      - i0_: 0
+        i1_: 1
+      - i0_: 1
+        i1_: 2
+      - i0_: 2
+        i1_: 3
+      - i0_: 3
+        i1_: 0
+      uvParams_:
+        shift: {x: 0, y: 0}
+        scale: {x: 1, y: 1}
+        rotation: 0
+      plane_:
+        normal_: {x: 0, y: 0, z: 1}
+        distance_: -11.904072
+      matID_: 0
+      flags_: 1
+      instanceID_: 25380971
+      groupID: 0
+    - vertices_:
+      - pos: {x: -10.01205, y: 0.20230293, z: 2.8788939}
+        uv: {x: 0.5258229, y: 0.9499265}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -10.011917, y: 0.20230383, z: 11.904072}
+        uv: {x: 0.6312706, y: 0.9499265}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -8.007024, y: 0.20230383, z: 11.904072}
+        uv: {x: 0.6312706, y: 0.8397025}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -8.007156, y: 0.20230293, z: 2.8788939}
+        uv: {x: 0.5258229, y: 0.8397025}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      edges_:
+      - i0_: 0
+        i1_: 1
+      - i0_: 1
+        i1_: 2
+      - i0_: 2
+        i1_: 3
+      - i0_: 3
+        i1_: 0
+      uvParams_:
+        shift: {x: 0, y: 0}
+        scale: {x: 1, y: 1}
+        rotation: 0
+      plane_:
+        normal_: {x: 0, y: 1, z: -0.00000009906394}
+        distance_: -0.20230265
+      matID_: 0
+      flags_: 1
+      instanceID_: 25380854
+      groupID: 0
+    - vertices_:
+      - pos: {x: -8.007156, y: 0.20230293, z: 2.8788939}
+        uv: {x: 0.4694165, y: 0.7236652}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -8.007024, y: 0.20230383, z: 11.904072}
+        uv: {x: 0.35389584, y: 0.7236723}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -4.127769, y: 0.20230383, z: 11.904072}
+        uv: {x: 0.35389584, y: 0.8541993}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -4.1279016, y: 0.20230293, z: 2.8788939}
+        uv: {x: 0.4694165, y: 0.8541922}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      edges_:
+      - i0_: 0
+        i1_: 1
+      - i0_: 1
+        i1_: 2
+      - i0_: 2
+        i1_: 3
+      - i0_: 3
+        i1_: 0
+      uvParams_:
+        shift: {x: 0, y: 0}
+        scale: {x: 1, y: 1}
+        rotation: 0
+      plane_:
+        normal_: {x: 0, y: 1, z: -0.00000009906394}
+        distance_: -0.20230265
+      matID_: 0
+      flags_: 1
+      instanceID_: 25380969
+      groupID: 0
+    - vertices_:
+      - pos: {x: -10.01205, y: 0, z: 2.8788939}
+        uv: {x: 0.52582157, y: 0.95428365}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -10.011917, y: 0.00000090897083, z: 11.904072}
+        uv: {x: 0.631271, y: 0.95428365}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -10.011917, y: 0.20230383, z: 11.904072}
+        uv: {x: 0.6312706, y: 0.9499265}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -10.01205, y: 0.20230293, z: 2.8788939}
+        uv: {x: 0.5258229, y: 0.9499265}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      edges_:
+      - i0_: 0
+        i1_: 1
+      - i0_: 1
+        i1_: 2
+      - i0_: 2
+        i1_: 3
+      - i0_: 3
+        i1_: 0
+      uvParams_:
+        shift: {x: 0, y: 0}
+        scale: {x: 1, y: 1}
+        rotation: 0
+      plane_:
+        normal_: {x: -1, y: 0, z: 0.00001468788}
+        distance_: -10.012092
+      matID_: 0
+      flags_: 1
+      instanceID_: 25380865
+      groupID: 0
+    - vertices_:
+      - pos: {x: -10.01205, y: -0.18095553, z: 2.8788939}
+        uv: {x: 0.52582157, y: 0.9581882}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -10.011917, y: -0.18095462, z: 11.904072}
+        uv: {x: 0.631271, y: 0.9581882}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -10.011917, y: 0.00000090897083, z: 11.904072}
+        uv: {x: 0.631271, y: 0.95428365}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -10.01205, y: 0, z: 2.8788939}
+        uv: {x: 0.52582157, y: 0.95428365}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      edges_:
+      - i0_: 0
+        i1_: 1
+      - i0_: 1
+        i1_: 2
+      - i0_: 2
+        i1_: 3
+      - i0_: 3
+        i1_: 0
+      uvParams_:
+        shift: {x: 0, y: 0}
+        scale: {x: 1, y: 1}
+        rotation: 0
+      plane_:
+        normal_: {x: -1, y: 0, z: 0.00001468788}
+        distance_: -10.012092
+      matID_: 0
+      flags_: 1
+      instanceID_: 25380876
+      groupID: 0
+    - vertices_:
+      - pos: {x: 8.087892, y: 0.00000090897083, z: 11.904072}
+        uv: {x: 0.6356307, y: 0.83970183}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 10.092785, y: 0.00000090897083, z: 11.904072}
+        uv: {x: 0.6356307, y: 0.949924}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 10.092785, y: 0.20230383, z: 11.904072}
+        uv: {x: 0.6312706, y: 0.9499265}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 8.087892, y: 0.20230383, z: 11.904072}
+        uv: {x: 0.6312706, y: 0.8397025}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      edges_:
+      - i0_: 0
+        i1_: 1
+      - i0_: 1
+        i1_: 2
+      - i0_: 2
+        i1_: 3
+      - i0_: 3
+        i1_: 0
+      uvParams_:
+        shift: {x: 0, y: 0}
+        scale: {x: 1, y: 1}
+        rotation: 0
+      plane_:
+        normal_: {x: 0, y: 0, z: 1}
+        distance_: -11.904072
+      matID_: 0
+      flags_: 1
+      instanceID_: 25383591
+      groupID: 0
+    - vertices_:
+      - pos: {x: 10.092785, y: 0.00000090897083, z: 11.904072}
+        uv: {x: 0.6356307, y: 0.949924}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 8.087892, y: 0.00000090897083, z: 11.904072}
+        uv: {x: 0.6356307, y: 0.83970183}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 8.087892, y: -0.18095462, z: 11.904072}
+        uv: {x: 0.6395352, y: 0.83970183}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 10.092785, y: -0.18095462, z: 11.904072}
+        uv: {x: 0.6395352, y: 0.949924}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      edges_:
+      - i0_: 0
+        i1_: 1
+      - i0_: 1
+        i1_: 2
+      - i0_: 2
+        i1_: 3
+      - i0_: 3
+        i1_: 0
+      uvParams_:
+        shift: {x: 0, y: 0}
+        scale: {x: 1, y: 1}
+        rotation: 0
+      plane_:
+        normal_: {x: -0, y: 0, z: 1}
+        distance_: -11.904072
+      matID_: 0
+      flags_: 1
+      instanceID_: 25383595
+      groupID: 0
+    - vertices_:
+      - pos: {x: 4.530244, y: 0.00000090897083, z: 11.904072}
+        uv: {x: 0.34911656, y: 0.8541993}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 4.530244, y: -0.18095462, z: 11.904072}
+        uv: {x: 0.34484226, y: 0.8541993}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 8.087892, y: -0.18095462, z: 11.904072}
+        uv: {x: 0.34484226, y: 0.7236723}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 8.087892, y: 0.00000090897083, z: 11.904072}
+        uv: {x: 0.34911656, y: 0.7236723}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      edges_:
+      - i0_: 0
+        i1_: 1
+      - i0_: 1
+        i1_: 2
+      - i0_: 2
+        i1_: 3
+      - i0_: 3
+        i1_: 0
+      uvParams_:
+        shift: {x: 0, y: 0}
+        scale: {x: 1, y: 1}
+        rotation: 0
+      plane_:
+        normal_: {x: 0, y: 0, z: 1}
+        distance_: -11.904072
+      matID_: 0
+      flags_: 1
+      instanceID_: 25383611
+      groupID: 0
+    - vertices_:
+      - pos: {x: 8.087892, y: 0.20230383, z: 11.904072}
+        uv: {x: 0.35389584, y: 0.7236723}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 4.530244, y: 0.20230383, z: 11.904072}
+        uv: {x: 0.35389584, y: 0.8541993}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 4.530244, y: 0.00000090897083, z: 11.904072}
+        uv: {x: 0.34911656, y: 0.8541993}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 8.087892, y: 0.00000090897083, z: 11.904072}
+        uv: {x: 0.34911656, y: 0.7236723}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      edges_:
+      - i0_: 0
+        i1_: 1
+      - i0_: 1
+        i1_: 2
+      - i0_: 2
+        i1_: 3
+      - i0_: 3
+        i1_: 0
+      uvParams_:
+        shift: {x: 0, y: 0}
+        scale: {x: 1, y: 1}
+        rotation: 0
+      plane_:
+        normal_: {x: -0, y: 0, z: 1}
+        distance_: -11.904072
+      matID_: 0
+      flags_: 1
+      instanceID_: 25383651
+      groupID: 0
+    - vertices_:
+      - pos: {x: 10.092652, y: 0.20230293, z: 2.8788939}
+        uv: {x: 0.5258229, y: 0.9499265}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 8.087759, y: 0.20230293, z: 2.8788939}
+        uv: {x: 0.5258229, y: 0.8397025}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 8.087892, y: 0.20230383, z: 11.904072}
+        uv: {x: 0.6312706, y: 0.8397025}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 10.092785, y: 0.20230383, z: 11.904072}
+        uv: {x: 0.6312706, y: 0.9499265}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      edges_:
+      - i0_: 0
+        i1_: 1
+      - i0_: 1
+        i1_: 2
+      - i0_: 2
+        i1_: 3
+      - i0_: 3
+        i1_: 0
+      uvParams_:
+        shift: {x: 0, y: 0}
+        scale: {x: 1, y: 1}
+        rotation: 0
+      plane_:
+        normal_: {x: 0, y: 1, z: -0.00000009906394}
+        distance_: -0.20230265
+      matID_: 0
+      flags_: 1
+      instanceID_: 25383626
+      groupID: 0
+    - vertices_:
+      - pos: {x: 8.087759, y: 0.20230293, z: 2.8788939}
+        uv: {x: 0.4694165, y: 0.7236652}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 4.5301113, y: 0.20230293, z: 2.8788939}
+        uv: {x: 0.4694165, y: 0.8541922}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 4.530244, y: 0.20230383, z: 11.904072}
+        uv: {x: 0.35389584, y: 0.8541993}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 8.087892, y: 0.20230383, z: 11.904072}
+        uv: {x: 0.35389584, y: 0.7236723}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      edges_:
+      - i0_: 0
+        i1_: 1
+      - i0_: 1
+        i1_: 2
+      - i0_: 2
+        i1_: 3
+      - i0_: 3
+        i1_: 0
+      uvParams_:
+        shift: {x: 0, y: 0}
+        scale: {x: 1, y: 1}
+        rotation: 0
+      plane_:
+        normal_: {x: 0, y: 1, z: -0.00000009906394}
+        distance_: -0.20230265
+      matID_: 0
+      flags_: 1
+      instanceID_: 25383647
+      groupID: 0
+    - vertices_:
+      - pos: {x: 10.092652, y: 0, z: 2.8788939}
+        uv: {x: 0.52582157, y: 0.95428365}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 10.092652, y: 0.20230293, z: 2.8788939}
+        uv: {x: 0.5258229, y: 0.9499265}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 10.092785, y: 0.20230383, z: 11.904072}
+        uv: {x: 0.6312706, y: 0.9499265}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 10.092785, y: 0.00000090897083, z: 11.904072}
+        uv: {x: 0.631271, y: 0.95428365}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      edges_:
+      - i0_: 0
+        i1_: 1
+      - i0_: 1
+        i1_: 2
+      - i0_: 2
+        i1_: 3
+      - i0_: 3
+        i1_: 0
+      uvParams_:
+        shift: {x: 0, y: 0}
+        scale: {x: 1, y: 1}
+        rotation: 0
+      plane_:
+        normal_: {x: 1, y: 0, z: -0.00001468788}
+        distance_: -10.09261
+      matID_: 0
+      flags_: 1
+      instanceID_: 25383633
+      groupID: 0
+    - vertices_:
+      - pos: {x: 10.092652, y: -0.18095553, z: 2.8788939}
+        uv: {x: 0.52582157, y: 0.9581882}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 10.092652, y: 0, z: 2.8788939}
+        uv: {x: 0.52582157, y: 0.95428365}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 10.092785, y: 0.00000090897083, z: 11.904072}
+        uv: {x: 0.631271, y: 0.95428365}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 10.092785, y: -0.18095462, z: 11.904072}
+        uv: {x: 0.631271, y: 0.9581882}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      edges_:
+      - i0_: 0
+        i1_: 1
+      - i0_: 1
+        i1_: 2
+      - i0_: 2
+        i1_: 3
+      - i0_: 3
+        i1_: 0
+      uvParams_:
+        shift: {x: 0, y: 0}
+        scale: {x: 1, y: 1}
+        rotation: 0
+      plane_:
+        normal_: {x: 1, y: 0, z: -0.00001468788}
+        distance_: -10.09261
+      matID_: 0
+      flags_: 1
+      instanceID_: 25383639
+      groupID: 0
+    - vertices_:
+      - pos: {x: -0.78279245, y: 0.00000090897083, z: 11.904072}
+        uv: {x: 0.3491237, y: 0.94989485}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -4.127769, y: 0.00000090897083, z: 11.904072}
+        uv: {x: 0.3491237, y: 0.8541922}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -4.127769, y: -0.18095462, z: 11.904072}
+        uv: {x: 0.34225345, y: 0.8541922}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -0.78279245, y: -0.18095462, z: 11.904072}
+        uv: {x: 0.34225345, y: 0.94989485}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      edges_:
+      - i0_: 0
+        i1_: 1
+      - i0_: 1
+        i1_: 2
+      - i0_: 2
+        i1_: 3
+      - i0_: 3
+        i1_: 0
+      uvParams_:
+        shift: {x: 0, y: 0}
+        scale: {x: 1, y: 1}
+        rotation: 0
+      plane_:
+        normal_: {x: -0, y: 0, z: 1}
+        distance_: -11.904072
+      matID_: 0
+      flags_: 1
+      instanceID_: 25383331
+      groupID: 0
+    - vertices_:
+      - pos: {x: -0.78279245, y: 0.20230383, z: 11.904072}
+        uv: {x: 0.35389835, y: 0.9498901}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -4.127769, y: 0.20230383, z: 11.904072}
+        uv: {x: 0.35389835, y: 0.8541934}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -4.127769, y: 0.00000090897083, z: 11.904072}
+        uv: {x: 0.3491237, y: 0.8541922}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -0.78279245, y: 0.00000090897083, z: 11.904072}
+        uv: {x: 0.3491237, y: 0.94989485}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      edges_:
+      - i0_: 0
+        i1_: 1
+      - i0_: 1
+        i1_: 2
+      - i0_: 2
+        i1_: 3
+      - i0_: 3
+        i1_: 0
+      uvParams_:
+        shift: {x: 0, y: 0}
+        scale: {x: 1, y: 1}
+        rotation: 0
+      plane_:
+        normal_: {x: -0, y: 0, z: 1}
+        distance_: -11.904072
+      matID_: 0
+      flags_: 1
+      instanceID_: 25383359
+      groupID: 0
+    - vertices_:
+      - pos: {x: -0.782925, y: 0.20230293, z: 2.8788939}
+        uv: {x: 0.46941864, y: 0.9498901}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -4.1279016, y: 0.20230293, z: 2.8788939}
+        uv: {x: 0.4694165, y: 0.8541922}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -4.127769, y: 0.20230383, z: 11.904072}
+        uv: {x: 0.35389584, y: 0.8541993}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -0.78279245, y: 0.20230383, z: 11.904072}
+        uv: {x: 0.35389835, y: 0.9498901}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      edges_:
+      - i0_: 0
+        i1_: 1
+      - i0_: 1
+        i1_: 2
+      - i0_: 2
+        i1_: 3
+      - i0_: 3
+        i1_: 0
+      uvParams_:
+        shift: {x: 0, y: 0}
+        scale: {x: 1, y: 1}
+        rotation: 0
+      plane_:
+        normal_: {x: 0, y: 1, z: -0.00000009906394}
+        distance_: -0.20230265
+      matID_: 0
+      flags_: 1
+      instanceID_: 25383391
+      groupID: 0
+    - vertices_:
+      - pos: {x: -0.78279245, y: 0.00000090897083, z: 11.904072}
+        uv: {x: 0.3491237, y: 0.94989485}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -0.78279245, y: -0.18095462, z: 11.904072}
+        uv: {x: 0.34225345, y: 0.94989485}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 4.530244, y: -0.18095462, z: 11.904072}
+        uv: {x: 0.34225345, y: 0.8541922}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 4.530244, y: 0.00000090897083, z: 11.904072}
+        uv: {x: 0.3491237, y: 0.8541922}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      edges_:
+      - i0_: 0
+        i1_: 1
+      - i0_: 1
+        i1_: 2
+      - i0_: 2
+        i1_: 3
+      - i0_: 3
+        i1_: 0
+      uvParams_:
+        shift: {x: 0, y: 0}
+        scale: {x: 1, y: 1}
+        rotation: 0
+      plane_:
+        normal_: {x: 0, y: 0, z: 1}
+        distance_: -11.904072
+      matID_: 0
+      flags_: 1
+      instanceID_: 25383663
+      groupID: 0
+    - vertices_:
+      - pos: {x: -0.78279245, y: 0.20230383, z: 11.904072}
+        uv: {x: 0.35389835, y: 0.9498901}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -0.78279245, y: 0.00000090897083, z: 11.904072}
+        uv: {x: 0.3491237, y: 0.94989485}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 4.530244, y: 0.00000090897083, z: 11.904072}
+        uv: {x: 0.3491237, y: 0.8541922}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 4.530244, y: 0.20230383, z: 11.904072}
+        uv: {x: 0.35389835, y: 0.8541934}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      edges_:
+      - i0_: 0
+        i1_: 1
+      - i0_: 1
+        i1_: 2
+      - i0_: 2
+        i1_: 3
+      - i0_: 3
+        i1_: 0
+      uvParams_:
+        shift: {x: 0, y: 0}
+        scale: {x: 1, y: 1}
+        rotation: 0
+      plane_:
+        normal_: {x: 0, y: 0, z: 1}
+        distance_: -11.904072
+      matID_: 0
+      flags_: 1
+      instanceID_: 25383671
+      groupID: 0
+    - vertices_:
+      - pos: {x: -0.782925, y: 0.20230293, z: 2.8788939}
+        uv: {x: 0.46941864, y: 0.9498901}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -0.78279245, y: 0.20230383, z: 11.904072}
+        uv: {x: 0.35389835, y: 0.9498901}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 4.530244, y: 0.20230383, z: 11.904072}
+        uv: {x: 0.35389584, y: 0.8541993}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 4.5301113, y: 0.20230293, z: 2.8788939}
+        uv: {x: 0.4694165, y: 0.8541922}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      edges_:
+      - i0_: 0
+        i1_: 1
+      - i0_: 1
+        i1_: 2
+      - i0_: 2
+        i1_: 3
+      - i0_: 3
+        i1_: 0
+      uvParams_:
+        shift: {x: 0, y: 0}
+        scale: {x: 1, y: 1}
+        rotation: 0
+      plane_:
+        normal_: {x: 0, y: 1, z: -0.00000009906394}
+        distance_: -0.20230265
+      matID_: 0
+      flags_: 1
+      instanceID_: 25383675
+      groupID: 0
+    - vertices_:
+      - pos: {x: -8.007156, y: 0, z: 2.8788939}
+        uv: {x: 0.47621918, y: 0.72366333}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -8.007156, y: 0.20230293, z: 2.8788939}
+        uv: {x: 0.46941376, y: 0.72366333}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -4.1279016, y: 0.20230293, z: 2.8788939}
+        uv: {x: 0.46941376, y: 0.854187}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: -4.1279016, y: 0, z: 2.8788939}
+        uv: {x: 0.47621918, y: 0.854187}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      edges_:
+      - i0_: 0
+        i1_: 1
+      - i0_: 1
+        i1_: 2
+      - i0_: 2
+        i1_: 3
+      - i0_: 3
+        i1_: 0
+      uvParams_:
+        shift: {x: 0, y: 0}
+        scale: {x: 1, y: 1}
+        rotation: 0
+      plane_:
+        normal_: {x: 0, y: 0, z: -1}
+        distance_: 2.8788939
+      matID_: 0
+      flags_: 1
+      instanceID_: 25380967
+      groupID: 0
+    - vertices_:
+      - pos: {x: 8.087759, y: 0, z: 2.8788939}
+        uv: {x: 0.46199036, y: 0.72366333}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 4.5301113, y: 0, z: 2.8788939}
+        uv: {x: 0.46199036, y: 0.854187}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 4.5301113, y: 0.20230293, z: 2.8788939}
+        uv: {x: 0.46941376, y: 0.854187}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      - pos: {x: 8.087759, y: 0.20230293, z: 2.8788939}
+        uv: {x: 0.46941376, y: 0.72366333}
+        color: {r: 1, g: 1, b: 1, a: 1}
+      edges_:
+      - i0_: 0
+        i1_: 1
+      - i0_: 1
+        i1_: 2
+      - i0_: 2
+        i1_: 3
+      - i0_: 3
+        i1_: 0
+      uvParams_:
+        shift: {x: 0, y: 0}
+        scale: {x: 1, y: 1}
+        rotation: 0
+      plane_:
+        normal_: {x: 0, y: 0, z: -1}
+        distance_: 2.8788939
+      matID_: 0
+      flags_: 1
+      instanceID_: 25383645
+      groupID: 0
+    subPolygons_: []
+    smoothingGroups_:
+      smoothing_groups_: []
+    edgeSharpnesses_:
+      edgeSharpnesses_: []
+    mirrorMode_:
+      enable: 0
+      plane:
+        normal_: {x: 0, y: 0, z: 0}
+        distance_: 0
+    uvIslandManager_:
+      uvislands_:
+      - polygonsAndIDs_:
+        - polygonID_: 114606
+        - polygonID_: 115953
+        - polygonID_: 114592
+        - polygonID_: 25369885
+        - polygonID_: 25369896
+        - polygonID_: 25383297
+        - polygonID_: 25383313
+        - polygonID_: 25380830
+        - polygonID_: 25383655
+        - polygonID_: 25383603
+        - polygonID_: 25383615
+        - polygonID_: 25383659
+        - polygonID_: 25383607
+        - polygonID_: 25383587
+        - polygonID_: 25383599
+        - polygonID_: 25383580
+        instanceID_: 38440610
+        selected: 0
+      - polygonsAndIDs_:
+        - polygonID_: 115978
+        - polygonID_: 25380852
+        - polygonID_: 25380863
+        - polygonID_: 25380874
+        - polygonID_: 25380854
+        - polygonID_: 25380865
+        - polygonID_: 25380876
+        - polygonID_: 25380841
+        - polygonID_: 113890
+        - polygonID_: 114602
+        instanceID_: 38440611
+        selected: 0
+      - polygonsAndIDs_:
+        - polygonID_: 25383583
+        - polygonID_: 25383622
+        - polygonID_: 25383630
+        - polygonID_: 25383636
+        - polygonID_: 25383626
+        - polygonID_: 25383633
+        - polygonID_: 25383639
+        - polygonID_: 25383619
+        - polygonID_: 25383591
+        - polygonID_: 25383595
+        instanceID_: 38440612
+        selected: 0
+      - polygonsAndIDs_:
+        - polygonID_: 25383645
+        instanceID_: 38441047
+        selected: 0
+      - polygonsAndIDs_:
+        - polygonID_: 25380967
+        - polygonID_: 25380887
+        - polygonID_: 25383405
+        - polygonID_: 25383667
+        - polygonID_: 25383679
+        - polygonID_: 25383391
+        - polygonID_: 25383671
+        - polygonID_: 25383675
+        - polygonID_: 25383345
+        - polygonID_: 25383642
+        - polygonID_: 25380969
+        - polygonID_: 25383651
+        - polygonID_: 25383647
+        - polygonID_: 25383331
+        - polygonID_: 25383359
+        - polygonID_: 25383663
+        - polygonID_: 25380971
+        - polygonID_: 25383611
+        - polygonID_: 25369916
+        instanceID_: 38441050
+        selected: 0
+    polygonGroupManager_:
+      polygonGroups_: []
+    activePolygonGroupId: 0
+  backfaces_: 0
+  materials:
+  - {fileID: 2100000, guid: 14c110f6155b25b4d808c151150a2097, type: 2}
+  editMode: 1
+  recalculateTangents: 1
+  serializedGuid: 
+  assetPath: 
+  isInvisibleObject: 0
+  mainRenderableMesh: {fileID: 0}
+--- !u!33 &1135552697864970046
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1135552697864970043}
+  m_Mesh: {fileID: 0}
+--- !u!23 &1135552697864970041
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1135552697864970043}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 14c110f6155b25b4d808c151150a2097, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 2
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!64 &1135552697864970040
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1135552697864970043}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}

@@ -55,8 +55,7 @@ public class PlayerMovement : MonoBehaviour
         Vector3 velocity = _movementInput * _speed;
         _rigidbody.velocity = velocity;
 
-        //Methods for turning
-        if (_orientationInput.sqrMagnitude == 0) return;
+        //Methods for turning        
         Quaternion lookRotation = Quaternion.LookRotation(_orientationInput);
         _rigidbody.MoveRotation(lookRotation);
         

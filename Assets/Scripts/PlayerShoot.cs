@@ -6,10 +6,11 @@ public class PlayerShoot : MonoBehaviour
 {
     [SerializeField] GameObject _bulletPrefab;
     [SerializeField] Transform _cannon;
+    public Transform bulletGroup;
 
     private void FireBullet()
     {
-        GameObject newBullet = Instantiate(_bulletPrefab, _cannon);   
+        GameObject newBullet = Instantiate(_bulletPrefab, _cannon.position, _cannon.rotation, bulletGroup);   
     }
     
     

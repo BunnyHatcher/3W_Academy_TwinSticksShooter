@@ -908,43 +908,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!21 &424521599
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Clayxels/ClayxelBuiltInShaderPolySplat
-  m_Shader: {fileID: 4800000, guid: 5166b6c85ecd8a94f8bae6947c972cf7, type: 3}
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 1aa3096b1b9d9204eaa6c75a4275adb1, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _ClayxelSize: 1
-    - _Cutoff: 0.95
-    - _Metallic: 0
-    - _NormalOrient: 1
-    - _RoughBump: 0
-    - _RoughColor: 0
-    - _RoughOrient: 0
-    - _Smoothness: 0.5
-    m_Colors:
-    - _Emission: {r: 0, g: 0, b: 0, a: 0}
-  m_BuildTextureStacks: []
 --- !u!1001 &455990722
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1429,14 +1392,14 @@ MonoBehaviour:
   chunksX: 1
   chunksY: 1
   chunksZ: 1
-  material: {fileID: 424521599}
+  material: {fileID: 1468533496}
   castShadows: 1
   receiveShadows: 1
-  storeAssetPath: 
+  storeAssetPath: ClayxelContainer
   frozen: 0
   clayObjectsOrderLocked: 1
   autoBounds: 1
-  renderMode: 0
+  renderMode: 2
   instanceOf: {fileID: 0}
   interactive: 0
   meshNormalSmooth: 180
@@ -2238,6 +2201,33 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!21 &1468533496
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Clayxels/ClayxelBuiltInShaderSmoothMesh
+  m_Shader: {fileID: 4800000, guid: 968614e486952464a865156c365429e3, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs: []
+    m_Ints: []
+    m_Floats:
+    - _Metallic: 0
+    - _Smoothness: 0.5
+    m_Colors:
+    - _Emission: {r: 0, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []
 --- !u!43 &1514121876
 Mesh:
   m_ObjectHideFlags: 0

@@ -35,6 +35,7 @@ public class PlayerMovement : MonoBehaviour
         //Input for movement with Left Twinstick
         horizontal = Input.GetAxisRaw("Horizontal_Move") * Time.deltaTime;
         vertical = Input.GetAxisRaw("Vertical_Move") * Time.deltaTime;
+
         _movementInput = new Vector3 (horizontal, 0, vertical);
         _movementInput.Normalize();
        // Debug.Log(_movementInput);
@@ -42,6 +43,7 @@ public class PlayerMovement : MonoBehaviour
         //Input for turning with right Twinstick
         orientationHorizontal = Input.GetAxis("Horizontal_Turn");
         orientationVertical = Input.GetAxis("Vertical_Turn");
+
         _orientationInput = new Vector3(orientationHorizontal, 0, orientationVertical);
        // Debug.Log(_orientationInput);
 

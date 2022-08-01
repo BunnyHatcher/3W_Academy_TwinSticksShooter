@@ -3116,6 +3116,7 @@ MonoBehaviour:
   _bulletPrefab: {fileID: 5002226419254205091, guid: 91d0de7ea1897f24a9bec505f66a2125, type: 3}
   _cannon: {fileID: 1908573736}
   bulletGroup: {fileID: 735952212}
+  __bulletSpeed: 30
 --- !u!1001 &1862096513
 PrefabInstance:
   m_ObjectHideFlags: 0

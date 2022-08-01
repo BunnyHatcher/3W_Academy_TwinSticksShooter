@@ -8,9 +8,15 @@ public class PlayerShoot : MonoBehaviour
     [SerializeField] Transform _cannon;
     public Transform bulletGroup;
 
+    [SerializeField] float __bulletSpeed;
+
+    
+
+
     private void FireBullet()
     {
         GameObject newBullet = Instantiate(_bulletPrefab, _cannon.position, _cannon.rotation, bulletGroup);   
+        newBullet.GetComponent<Bullet>().Shoot(__bulletSpeed);
     }
     
     

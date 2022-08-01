@@ -10,7 +10,12 @@ public class PlayerShoot : MonoBehaviour
 
     [SerializeField] float __bulletSpeed;
 
-    
+    //Setting shot intervall
+    [SerializeField] float _delayBetweenShots = 0.2f;
+    private float _nextShotTime;
+
+
+
 
 
     private void FireBullet()
@@ -18,8 +23,11 @@ public class PlayerShoot : MonoBehaviour
         GameObject newBullet = Instantiate(_bulletPrefab, _cannon.position, _cannon.rotation, bulletGroup);   
         newBullet.GetComponent<Bullet>().Shoot(__bulletSpeed);
     }
-    
-    
+
+    private void Awake()
+    {
+        _nextShotTime = Time.time;
+    }
 
 
     // Start is called before the first frame update
@@ -31,9 +39,13 @@ public class PlayerShoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButton("Fire1"))
+        if (Input.GetAxisRaw("Fire1")!=0 && Time.time >= _nextShotTime)
+        //the !=0 helps turn this from an axis into a positive/negative input
         {
             FireBullet();
+            _nextShotTime = _delayBetweenShots + Time.time;
         }
+
+
     }
 }

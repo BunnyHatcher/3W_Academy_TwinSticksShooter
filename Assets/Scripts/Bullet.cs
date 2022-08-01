@@ -13,12 +13,14 @@ public class Bullet : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody>();
         _transform = GetComponent<Transform>();
 
+        Destroy(gameObject, 5f);
+
     }
 
     // Start is called before the first frame update
     void Start()
     {
-      // _rigidbody.velocity = transform.forward * _bulletSpeed;
+        
     }
 
     // Update is called once per frame
@@ -38,5 +40,10 @@ public class Bullet : MonoBehaviour
     public void Shoot(float speed) 
     {
         _bulletSpeed = speed;
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        Destroy(gameObject);
     }
 }

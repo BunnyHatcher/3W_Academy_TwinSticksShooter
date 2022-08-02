@@ -22,14 +22,14 @@ public class EnemyCollision : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
        /* if (collision.gameObject.CompareTag("Player"))
         {
             Destroy(collision.gameObject);
         } */
 
-        if (collision.gameObject.CompareTag("Bullet"))
+        if (other.gameObject.CompareTag("Bullet"))
         {
             _enemyHP--;
 

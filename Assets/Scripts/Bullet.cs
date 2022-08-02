@@ -42,8 +42,8 @@ public class Bullet : MonoBehaviour
         _bulletSpeed = speed;
     }
 
-    private void OnCollisionEnter(Collision other)
+   /* private void OnCollisionEnter(Collision other)
     {
         Destroy(gameObject);
-    }
+    } */
 }

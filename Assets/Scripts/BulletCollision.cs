@@ -16,8 +16,14 @@ public class BulletCollision : MonoBehaviour
         
     }
 
-    /*private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
+        if (other.gameObject.tag == "Player")
+        {
+
+            return;
+        }
+        
         Destroy(gameObject);
-    }*/
+    }
 }

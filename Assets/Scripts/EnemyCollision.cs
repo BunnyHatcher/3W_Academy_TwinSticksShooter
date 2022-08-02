@@ -6,6 +6,7 @@ public class EnemyCollision : MonoBehaviour
    
 
 {
+    [SerializeField] IntVariable _playerCurrentHP;
     [SerializeField] private int _enemyHP = 2;
 
         
@@ -24,10 +25,15 @@ public class EnemyCollision : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-       /* if (collision.gameObject.CompareTag("Player"))
+       if (other.gameObject.CompareTag("Player"))
         {
-            Destroy(collision.gameObject);
-        } */
+            _playerCurrentHP.Value --;
+
+            if (_playerCurrentHP.Value <= 0)
+            {
+                Destroy(gameObject);
+            }
+        }
 
         if (other.gameObject.CompareTag("Bullet"))
         {

@@ -135,7 +135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerTransform: {fileID: 0}
   movementSpeed: 10
-  rotationSpeed: 50
+  rotationSpeed: 100
 --- !u!114 &67603556761856103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148,6 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc59b46d83ee7e349b0caad58592a93c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerCurrentHP: {fileID: 11400000, guid: 56039ead22829e84e8eb8215dff940c9, type: 2}
   _enemyHP: 2
 --- !u!1 &6402697435717424721
 GameObject:

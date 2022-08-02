@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 3314158339898855737}
   - component: {fileID: 3314158339898855734}
   - component: {fileID: 3314158339898855735}
-  - component: {fileID: 3314158339898855732}
   m_Layer: 0
   m_Name: CastleTower
   m_TagString: Untagged
@@ -10799,17 +10798,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &3314158339898855732
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3314158339898855733}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}

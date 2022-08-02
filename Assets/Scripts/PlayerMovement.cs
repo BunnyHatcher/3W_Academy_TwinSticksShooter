@@ -33,8 +33,8 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         //Input for movement with Left Twinstick
-        horizontal = Input.GetAxisRaw("Horizontal_Move"); // * Time.deltaTime;
-        vertical = Input.GetAxisRaw("Vertical_Move");// * Time.deltaTime;
+        horizontal = Input.GetAxisRaw("Horizontal_Move"); 
+        vertical = Input.GetAxisRaw("Vertical_Move");
 
         _movementInput = new Vector3 (horizontal, 0, vertical);
         _movementInput.Normalize();

@@ -12,6 +12,12 @@ public class PlayerHealth : MonoBehaviour
         _playerCurrentHP = _playerStartHP;
     }
 
+    public void GameOver()
+    {
+        //Destroy(gameObject);
+        gameObject.SetActive(false);
+    }
+
     // Start is called before the first frame update
     void Start()
     {

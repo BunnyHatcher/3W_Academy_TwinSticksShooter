@@ -6,5 +6,5 @@ using UnityEngine;
 
 public class IntVariable : ScriptableObject
 {
-    public byte Value;
+    public int Value;
 }

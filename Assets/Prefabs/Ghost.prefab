@@ -68,6 +68,7 @@ GameObject:
   - component: {fileID: 6402697435546333039}
   - component: {fileID: 6402697435546333036}
   - component: {fileID: 67603556761856103}
+  - component: {fileID: 6167638882239803274}
   m_Layer: 0
   m_Name: Ghost
   m_TagString: Enemy
@@ -150,6 +151,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerCurrentHP: {fileID: 11400000, guid: 56039ead22829e84e8eb8215dff940c9, type: 2}
   _enemyHP: 2
+--- !u!136 &6167638882239803274
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6402697435546333037}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.68
+  m_Height: 1.94
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.91, z: 0}
 --- !u!1 &6402697435717424721
 GameObject:
   m_ObjectHideFlags: 0

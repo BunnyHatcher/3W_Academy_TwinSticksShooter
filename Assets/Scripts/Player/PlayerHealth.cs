@@ -9,7 +9,8 @@ public class PlayerHealth : MonoBehaviour
 
     private void Awake()
     {
-        _playerCurrentHP = _playerStartHP;
+        _playerCurrentHP.Value = _playerStartHP.Value;
+        Debug.Log(_playerCurrentHP.Value);
     }
 
     public void GameOver()
@@ -28,5 +29,20 @@ public class PlayerHealth : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void PlayerHit()
+    {
+        _playerCurrentHP.Value -= 1;
+        Debug.Log(_playerCurrentHP.Value);
+        if (_playerCurrentHP.Value <= 0)
+        {
+            GameOver();
+        }
+    }
+
+    public void PlayerHealed()
+    {
+        _playerCurrentHP.Value += 1;
     }
 }

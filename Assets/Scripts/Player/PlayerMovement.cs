@@ -6,6 +6,8 @@ public class PlayerMovement : MonoBehaviour
 {
     private Vector3 _movementInput;
     private Vector3 _orientationInput;
+    private Vector3 _currentOrientation;
+    [SerializeField] private float _turningSpeed = 0.75f;
     Rigidbody _rigidbody;
 
     [SerializeField] private float _speed;
@@ -21,11 +23,11 @@ public class PlayerMovement : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody>();
     }
 
-
-
     // Start is called before the first frame update
     void Start()
     {
+        // to solve issue where current rotation is a zero vector, which cannot be transformed into a quaternion
+        _currentOrientation = new Vector3(1.0f, 0.0f, 0.0f);
 
     }
 
@@ -55,8 +57,13 @@ public class PlayerMovement : MonoBehaviour
         Vector3 velocity = _movementInput * _speed;
         _rigidbody.velocity = velocity;
 
-        //Methods for turning        
-        Quaternion lookRotation = Quaternion.LookRotation(_orientationInput);
+        //use Lerp to interpolate turning movement between two values and so make it smoother
+        _currentOrientation = Vector3.Lerp(_currentOrientation, _orientationInput, _turningSpeed * Time.fixedDeltaTime);
+
+        //Methods for turning
+        //Transforming Vector3 into Quaternion
+        Quaternion lookRotation = Quaternion.LookRotation(_currentOrientation);
+        //Make character turn physically
         _rigidbody.MoveRotation(lookRotation);
         
        // Debug.Log("x :" + orientationHorizontal + "z :" + orientationVertical + "Magnitude: " + _orientationInput.sqrMagnitude );

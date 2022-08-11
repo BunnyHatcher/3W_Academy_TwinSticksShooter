@@ -8,7 +8,7 @@ public class EnemyCollision : MonoBehaviour
 {
     [SerializeField] IntVariable _playerCurrentHP;
     [SerializeField] private int _enemyHP = 2;
-    [SerializeField] public PlayerHealth playerHP;
+    [SerializeField] public PlayerHealth playerHealthComponent;
 
 
 
@@ -17,7 +17,7 @@ public class EnemyCollision : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-      playerHP =  GameObject.Find("Player").GetComponent<PlayerHealth>();  
+      playerHealthComponent =  GameObject.Find("Player").GetComponent<PlayerHealth>();  
     }
 
     // Update is called once per frame
@@ -30,14 +30,8 @@ public class EnemyCollision : MonoBehaviour
     {
        if (other.gameObject.CompareTag("Player"))
         {
-            _playerCurrentHP.Value --;
-            Debug.Log("Hit");
-            if (_playerCurrentHP.Value <= 0)
-            {
-                
-                
-                playerHP.GameOver();
-            }
+            playerHealthComponent.PlayerHit();
+            
         }
 
         if (other.gameObject.CompareTag("Bullet"))

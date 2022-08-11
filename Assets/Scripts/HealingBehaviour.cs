@@ -5,20 +5,21 @@ using UnityEngine;
 public class HealingBehaviour : MonoBehaviour
 {
 
-    [SerializeField] IntVariable _playerCurrentHP;
-    
+    protected PlayerHealth playerHealthComponent;
+
+    void Start()
+    {
+        //playerHealthComponent = GameObject.Find("Player").GetComponent<PlayerHealth>();
+    }
+
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
-
-            _playerCurrentHP.Value++;            
-            
-
-            Debug.Log(_playerCurrentHP.Value);
-
-            Destroy(gameObject);
+            //playerHealthComponent.PlayerHealed();
+            other.gameObject.GetComponent<PlayerHealth>().PlayerHealed();
+            gameObject.SetActive(false);
         }
 
         

@@ -5,6 +5,9 @@ using UnityEngine;
 public class BulletCollision : MonoBehaviour
 {
     // Start is called before the first frame update
+
+    [SerializeField] ParticleSystem impactEffect;
+
     void Start()
     {
         
@@ -23,7 +26,8 @@ public class BulletCollision : MonoBehaviour
 
             return;
         }
-        
+
+        impactEffect.Play();
         Destroy(gameObject);
     }
 }

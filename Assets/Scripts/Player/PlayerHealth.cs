@@ -7,6 +7,8 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] IntVariable _playerStartHP;
     [SerializeField] IntVariable _playerCurrentHP;
 
+    [SerializeField] ParticleSystem hitEffect;
+
     private void Awake()
     {
         _playerCurrentHP.Value = _playerStartHP.Value;
@@ -34,6 +36,7 @@ public class PlayerHealth : MonoBehaviour
     public void PlayerHit()
     {
         _playerCurrentHP.Value -= 1;
+        hitEffect.Play();
         Debug.Log(_playerCurrentHP.Value);
         if (_playerCurrentHP.Value <= 0)
         {

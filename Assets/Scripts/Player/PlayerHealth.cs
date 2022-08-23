@@ -8,6 +8,9 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] IntVariable _playerCurrentHP;
 
     [SerializeField] ParticleSystem hitEffect;
+    [SerializeField] ParticleSystem deathEffect;
+
+    [SerializeField] GameObject dragon;
 
     private void Awake()
     {
@@ -18,7 +21,8 @@ public class PlayerHealth : MonoBehaviour
     public void GameOver()
     {
         //Destroy(gameObject);
-        gameObject.SetActive(false);
+        deathEffect.Play();
+        dragon.SetActive(false);
     }
 
     // Start is called before the first frame update
@@ -40,6 +44,7 @@ public class PlayerHealth : MonoBehaviour
         Debug.Log(_playerCurrentHP.Value);
         if (_playerCurrentHP.Value <= 0)
         {
+            Debug.Log("Player Death");
             GameOver();
         }
     }

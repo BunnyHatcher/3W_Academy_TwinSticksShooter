@@ -21,7 +21,7 @@ public class BulletCollision : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player" || other.gameObject.tag == "Item")
         {
 
             return;

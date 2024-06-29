@@ -6,6 +6,7 @@ public class HealingBehaviour : MonoBehaviour
 {
 
     protected PlayerHealth playerHealthComponent;
+    [SerializeField] ParticleSystem healEffect;
 
     void Start()
     {
@@ -19,6 +20,7 @@ public class HealingBehaviour : MonoBehaviour
         {
             //playerHealthComponent.PlayerHealed();
             other.gameObject.GetComponent<PlayerHealth>().PlayerHealed();
+            healEffect.Play();
             gameObject.SetActive(false);
         }
 
